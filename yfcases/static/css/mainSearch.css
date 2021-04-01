@@ -1,0 +1,26 @@
+body {
+  background-color: #f2f4f6;
+}
+.search-bar {
+  /*max-width: 940px;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+.search-bar .row{
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 0.325rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.125);
+}
+.search-bar .col-12{
+  padding: 0.5rem;
+}
+
+
+@media (min-width: 768px) {
+  .search-bar label {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+  }
+}

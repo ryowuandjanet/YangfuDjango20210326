@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/mainSearch.css' %}" />
+
+<div class="search-bar">
+  <form class="row no-gutters flex-column flex-md-row align-items-md-end">
+    <div class="col-12 col-md">
+      <select class="form-control" id="type" name="type">
+        <option value="0"></option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+      </select>
+    </div>
+    <div class="col-12 col-md">
+      <input class="form-control" id="keywords" name="keywords" type="text" placeholder="--縣市--" />
+    </div>
+    <div class="col-12 col-md">
+      <input class="form-control" id="postcode" name="postcode" type="text" placeholder="--人員--" />
+    </div>
+    <div class="col-12 col-md">
+      <input class="form-control" id="postcode" name="postcode" type="text" placeholder="--判定--" />
+    </div>
+    <div class="col-12 col-md-auto">
+      <button class="btn btn-success" type="submit">篩選</button>
+    </div>
+  </form>
+</div>
