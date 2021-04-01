@@ -29,10 +29,38 @@
         <td>3拍進場</td>
         <td>待標</td>
         <td>待優購</td>
-        <td>KH001</td>
+        <td>
+          KH001
+          <a href="javascript:void(0)" onclick="yfcase_modal_delete('{% url 'yfcase:yfcase_delete' yfcase.id %}')" class="btn btn-outline-danger btn-sm delete-btn">
+			      <i class="fas fa-trash-alt fa-lg"></i>
+          </a>
+        </td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
 </div>
+
+<div class="modal fade" id="deleteYfcaseModal" role="dialog"></div>
+
+<script>
+  /* global $*/
+  $(function() {
+    $('.class_on_first_link').click(function(){
+      window.location = window.location.protocol + '//' + window.location.hostname + ':3000';
+    });
+  });
+
+  function yfcase_modal_delete(url) {
+    $('#deleteYfcaseModal').load(url,function() {
+      $(this).modal('show')
+    })
+  }
+
+  function gohome(){
+    window.location.hostname
+  }
+
+</script>
+
 

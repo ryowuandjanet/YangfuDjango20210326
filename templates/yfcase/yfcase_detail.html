@@ -19,6 +19,17 @@
   		<div class="row">
   			<div class="miniBaseData">
   				基本資料
+  				<!-- 如果登入者=案件建立者或是管理者，就執行下列的動作 -->
+       
+            <span style="font-size: 12pt;vertical-align: middle;">
+              <a href="javascript:void(0)" onclick="yfcase_modal_edit('{% url 'yfcase:yfcase_edit' yfcase.id %}')">
+                <span class="fa-stack" style="color:DarkGreen;">
+                  <i class="far fa-circle fa-stack-2x" ></i>
+                  <i class="fas fa-pen fa-stack-1x"></i>
+                </span>
+              </a>
+            </span>
+          
   			</div>
   		</div>
   		<div class="row">
@@ -27,4 +38,19 @@
   		</div>
   	</div>
   </div>
+  
+  <!-- Yfcase Modal -->
+	<div class="modal fade" id="editYfcaseModal" role="dialog"></div>
+
+  <script>
+    /* global $*/
+    // Yfcase JS
+    function yfcase_modal_edit(url) {
+      $('#editYfcaseModal').load(url,function() {
+        $(this).modal('show')
+      })
+    }
+  </script>
 {% endblock content %}
+
+
