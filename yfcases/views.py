@@ -14,6 +14,18 @@ class YfcaseListView(ListView):
   model=Yfcase
   template_name="home.html"
 
+@method_decorator(login_required,name='dispatch')
+class YfcaseDetailView(DetailView):
+  model=Yfcase
+  form_class = YfcaseForm
+  template_name="yfcase/yfcase_detail.html"
+  success_url = reverse_lazy('yfcase:yfcase_detail')
+
+  def get_context_data(self, **kwargs):
+    context = super().get_context_data(**kwargs)
+    context['title'] = '建立項目'
+    return context
+
 class YfcaseCreateView(CreateView):
   model=Yfcase
   form_class = YfcaseForm

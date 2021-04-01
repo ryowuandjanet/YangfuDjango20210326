@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block style %}
+  <link rel="stylesheet" href="{% static 'css/yfcaseDetail.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <!-- 標頭 -->
+  <div class="col">
+  	<div class="yfratingscalePDFTitle">
+  		{{object.yfcaseCaseNumber}} YF評量表
+  	</div>
+  </div>
+  <div class="col">
+  	<div class="container col">
+  		<!--基本資料-->
+  		<div class="row">
+  			<div class="miniBaseData">
+  				基本資料
+  			</div>
+  		</div>
+  		<div class="row">
+  			<!--基本資料樣版-->
+  			{% include "./partials/baseData.html" %}
+  		</div>
+  	</div>
+  </div>
+{% endblock content %}

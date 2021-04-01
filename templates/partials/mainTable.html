@@ -18,10 +18,11 @@
       {% for yfcase in object_list %}
       <tr>
         <td>
-          {{yfcase.yfcaseCaseNumber}}
-          <br>
-          &emsp;&#10149;{{yfcase.yfcaseCity|default_if_none:""}}{{yfcase.yfcaseTownship|default_if_none:""}}{{yfcase.yfcaseBigSection|default_if_none:""}}{{yfcase.yfcaseSmallSectiion|default_if_none:""}}
-          {{yfcase.fullAddress}}
+          <a href="{% url 'yfcase:yfcase_detail' yfcase.id %}">
+            {{yfcase.yfcaseCaseNumber}}
+            <br>
+            &emsp;&#10149;{{yfcase.fullAddress}}
+          </a>
         </td>
         <td>13</td>
         <td>{{ yfcase.user.userFullName }}</td>
