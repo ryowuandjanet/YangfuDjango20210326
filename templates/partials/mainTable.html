@@ -15,24 +15,22 @@
       </tr>
     </thead>
     <tbody>
+      {% for yfcase in object_list %}
       <tr>
-        <td>天字第220292348924282923424號<br>台南市佳里區仁愛路一段28鄰329巷11弄33號11樓之2</td>
+        <td>
+          {{yfcase.yfcaseCaseNumber}}
+          <br>
+          &emsp;&#10149;{{yfcase.yfcaseCity|default_if_none:""}}{{yfcase.yfcaseTownship|default_if_none:""}}{{yfcase.yfcaseBigSection|default_if_none:""}}{{yfcase.yfcaseSmallSectiion|default_if_none:""}}
+          {{yfcase.fullAddress}}
+        </td>
         <td>13</td>
-        <td>吳小毛</td>
+        <td>{{ yfcase.user.userFullName }}</td>
         <td>3拍進場</td>
         <td>待標</td>
         <td>待優購</td>
         <td>KH001</td>
       </tr>
-      <tr>
-        <td>天字第2202924282923424號</td>
-        <td>13</td>
-        <td>吳小毛</td>
-        <td>3拍進場</td>
-        <td>待標</td>
-        <td>待優購</td>
-        <td>KH001</td>
-      </tr>
+      {% endfor %}
     </tbody>
   </table>
 </div>

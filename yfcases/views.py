@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from django.views.generic import TemplateView
 from django.views.generic import ListView,DetailView
 from django.views.generic.edit import CreateView,UpdateView,DeleteView
@@ -7,8 +9,10 @@ from .models import *
 from users.models import *
 from .forms import *
 
-class HomePageView(TemplateView):
-  template_name = 'home.html'
+@method_decorator(login_required,name='dispatch')   
+class YfcaseListView(ListView):
+  model=Yfcase
+  template_name="home.html"
 
 class YfcaseCreateView(CreateView):
   model=Yfcase
