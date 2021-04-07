@@ -17,95 +17,153 @@
 			</div>
 			<!-- body -->
 			<div class="modal-body">
-				<table>
-					<!-- {{ form.as_table }} -->
-				</table>
+
 				<input type="hidden" id="user" name="user" value={{author_id}}>
-				<!-- {{ form.user|attr:"type:text value:1" }} -->
-				<div class="form-group">
-					<label for="{{ form.yfcaseCaseNumber.id_for_label }}">
-						{{ form.yfcaseCaseNumber.label }}
-					</label>
-					{{ form.yfcaseCaseNumber|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseCaseNumber.error }}</span>
-				</div>
-				<div class="form-group">
-					<label for="{{ form.yfcaseCompany.id_for_label }}">
-						{{ form.yfcaseCompany.label }}
-					</label>
-					{{ form.yfcaseCompany|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseCompany.error }}</span>
-				</div>
-				<div class="form-group">
-					<label for="{{ form.yfcaseCity.id_for_label }}">
-						{{ form.yfcaseCity.label }}
-					</label>
-					{{ form.yfcaseCity|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseCity.error }}</span>
-				</div>
-				<div class="form-group">
-					<label for="{{ form.yfcaseTownship.id_for_label }}">
-						{{ form.yfcaseTownship.label }}
-					</label>
-					{{ form.yfcaseTownship|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseTownship.error }}</span>
-				</div>
-				<div class="form-group">
-					<label for="{{ form.yfcaseBigSection.id_for_label }}">
-						{{ form.yfcaseBigSection.label }}
-					</label>
-					{{ form.yfcaseBigSection|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseBigSection.error }}</span>
-				</div>
-				<div class="form-group">
-					<label for="{{ form.yfcaseSmallSection.id_for_label }}">
-						{{ form.yfcaseSmallSection.label }}
-					</label>
-					{{ form.yfcaseSmallSection|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseSmallSection.error }}</span>
-				</div>
-				<div class="form-group">
-					<label for="{{ form.yfcaseLane.id_for_label }}">
-						{{ form.yfcaseLane.label }}
-					</label>
-					{{ form.yfcaseLane|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseLane.error }}</span>
-				</div>
-				<div class="form-group">
-					<label for="{{ form.yfcaseAlley.id_for_label }}">
-						{{ form.yfcaseAlley.label }}
-					</label>
-					{{ form.yfcaseAlley|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseAlley.error }}</span>
-				</div>
-				<div class="form-group">
-					<label for="{{ form.yfcaseNumber.id_for_label }}">
-						{{ form.yfcaseNumber.label }}
-					</label>
-					{{ form.yfcaseNumber|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseNumber.error }}</span>
-				</div>
-				<div class="form-group">
-					<label for="{{ form.yfcaseFloor.id_for_label }}">
-						{{ form.yfcaseFloor.label }}
-					</label>
-					{{ form.yfcaseFloor|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseFloor.error }}</span>
-				</div>
-				<div class="form-group">
-					<label for="{{ form.yfcaseDebtor.id_for_label }}">
-						{{ form.yfcaseDebtor.label }}
-					</label>
-					{{ form.yfcaseDebtor|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseDebtor.error }}</span>
-				</div>
-				<div class="form-group">
-					<label for="{{ form.yfcaseCreditor.id_for_label }}">
-						{{ form.yfcaseCreditor.label }}
-					</label>
-					{{ form.yfcaseCreditor|add_class:'form-control' }}
-					<span class="help-block">{{ form.yfcaseCreditor.error }}</span>
-				</div>
+				
+				        <!--案號-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseCaseNumber.id_for_label }}">
+            {{ form.yfcaseCaseNumber.label }}
+          </label>
+          {{ form.yfcaseCaseNumber|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseCaseNumber.error }}</span>
+        </div>
+        
+        <!--公司-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseCompany.id_for_label }}">
+            {{ form.yfcaseCompany.label }}
+          </label>
+          {{ form.yfcaseCompany|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseCompany.error }}</span>
+        </div>
+        
+        <!--城市里-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseCity.id_for_label }}">
+            {{ form.yfcaseCity.label }}
+            </label>
+          {{ form.yfcaseCity|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseCity.error }}</span>
+        </div>
+        
+        <!--鄉鎮區里-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseTownship.id_for_label }}">
+            {{ form.yfcaseTownship.label }}
+            </label>
+          {{ form.yfcaseTownship|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseTownship.error }}</span>
+        </div>
+        
+        <!--段號-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseBigSection.id_for_label }}">
+            {{ form.yfcaseBigSection.label }}
+            </label>
+          {{ form.yfcaseBigSection|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseBigSection.error }}</span>
+        </div>
+        
+        <!--小段-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseSmallSection.id_for_label }}">
+            {{ form.yfcaseSmallSection.label }}
+            </label>
+          {{ form.yfcaseSmallSection|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseSmallSection.error }}</span>
+        </div>
+        
+        <!--村里-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseVillage.id_for_label }}">
+            {{ form.yfcaseVillage.label }}
+            </label>
+          {{ form.yfcaseVillage|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseVillage.error }}</span>
+        </div>
+        
+        <!--鄰-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseNeighbor.id_for_label }}">
+            {{ form.yfcaseNeighbor.label }}
+            </label>
+          {{ form.yfcaseNeighbor|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseNeighbor.error }}</span>
+        </div>
+        
+        <!--街路-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseStreet.id_for_label }}">
+            {{ form.yfcaseStreet.label }}
+            </label>
+          {{ form.yfcaseStreet|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseStreet.error }}</span>
+        </div>
+        
+        <!--段-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseSection.id_for_label }}">
+            {{ form.yfcaseSection.label }}
+            </label>
+          {{ form.yfcaseSection|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseSection.error }}</span>
+        </div>
+        
+        <!--巷-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseLane.id_for_label }}">
+            {{ form.yfcaseLane.label }}
+            </label>
+          {{ form.yfcaseLane|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseLane.error }}</span>
+        </div>
+        
+        <!--弄-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseAlley.id_for_label }}">
+            {{ form.yfcaseAlley.label }}
+            </label>
+          {{ form.yfcaseAlley|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseAlley.error }}</span>
+        </div>
+        
+        <!--號-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseNumber.id_for_label }}">
+            {{ form.yfcaseNumber.label }}
+            </label>
+          {{ form.yfcaseNumber|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseNumber.error }}</span>
+        </div>
+        
+        <!--樓-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseFloor.id_for_label }}">
+            {{ form.yfcaseFloor.label }}
+            </label>
+          {{ form.yfcaseFloor|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseFloor.error }}</span>
+        </div>
+        
+        <!--債務人-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseDebtor.id_for_label }}">
+            {{ form.yfcaseDebtor.label }}
+            </label>
+          {{ form.yfcaseDebtor|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseDebtor.error }}</span>
+        </div>
+        
+        <!--債權人-->
+        <div class="form-group">
+          <label for="{{ form.yfcaseCreditor.id_for_label }}">
+            {{ form.yfcaseCreditor.label }}
+            </label>
+          {{ form.yfcaseCreditor|add_class:'form-control' }}
+          <span class="help-block">{{ form.yfcaseCreditor.error }}</span>
+        </div>
+        
 			</div>
 			<!-- footer -->
 			<div class="modal-footer">
